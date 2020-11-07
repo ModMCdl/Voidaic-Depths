@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "voidaicdepths:polished_voidstone"
+    }
+  },
+  "result":
+  {
+    "item": "voidaicdepths:polished_voidstone_slab",
+    "count": 6
+  }
+}

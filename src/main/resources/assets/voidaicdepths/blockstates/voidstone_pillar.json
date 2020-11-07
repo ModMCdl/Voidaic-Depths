@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model":  "voidaicdepths:block/voidstone_pillar" },
+    "axis=z": { "model":  "voidaicdepths:block/voidstone_pillar", "x": 90 },
+    "axis=x": { "model":  "voidaicdepths:block/voidstone_pillar", "x": 90, "y": 90 }
+  }
+}

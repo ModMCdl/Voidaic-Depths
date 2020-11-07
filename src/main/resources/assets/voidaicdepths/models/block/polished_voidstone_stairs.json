@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "voidaicdepths:blocks/voidstone/voidrock_smooth",
+    "top": "voidaicdepths:blocks/voidstone/voidrock_smooth",
+    "side": "voidaicdepths:blocks/voidstone/voidrock_smooth"
+  }
+}

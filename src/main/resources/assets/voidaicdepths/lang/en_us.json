@@ -1,0 +1,36 @@
+{
+  "item.voidaicdepths.arcane_salt": "Arcane Salt",
+  "item.voidaicdepths.void_crystal": "Void Crystal",
+  "item.voidaicdepths.void_star": "Void Star",
+  "item.voidaicdepths.void_nugget": "Void Nugget",
+  "item.voidaicdepths.void_ingot": "Void Ingot",
+
+  "block.voidaicdepths.voidstone": "Voidstone",
+  "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
+  "block.voidaicdepths.voidstone_pillar": "Voidstone Pillar",
+  "block.voidaicdepths.voidstone_tiles": "Voidstone Tiles",
+  "block.voidaicdepths.cracked_voidstone_tiles": "Cracked Voidstone Tiles",
+  "block.voidaicdepths.polished_voidstone": "Polished Voidstone",
+  "block.voidaicdepths.voidstone_wall": "Voidstone Wall",
+  "block.voidaicdepths.polished_voidstone_wall": "Polished Voidstone Wall",
+  "block.voidaicdepths.polished_voidstone_stairs": "Polished Voidstone Stairs",
+  "block.voidaicdepths.voidstone_tile_stairs": "Voidstone Tile Stairs",
+  "block.voidaicdepths.voidstone_tile_slab": "Voidstone Tile Slab",
+  "block.voidaicdepths.polished_voidstone_slab": "Polished Voidstone Slab",
+
+  "block.voidaicdepths.void_ore": "Void Ore",
+
+  "block.voidaicdepths.void_lantern": "Void Lantern",
+
+  "block.voidaicdepths.underwood_log": "Underwood Log",
+  "block.voidaiddepths.underwood_planks": "Underwood Planks",
+  "block.voidaiddepths.underwood_stairs": "Underwood Stairs",
+  "block.voidaiddepths.underwood_slab": "Underwood Slab",
+
+  "block.voidaicdepths.void_weeds": "Void Weeds",
+  "block.voidaicdepths.void_bulb": "Void Bulb",
+
+  "itemGroup.voidaic_depths": "Voidaic Depths"
+
+
+}

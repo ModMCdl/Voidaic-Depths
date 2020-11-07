@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient":
+  {
+    "item": "voidaicdepths:voidstone"
+  },
+
+    "result": "voidaicdepths:polished_voidstone_slab",
+    "count": 2
+}
