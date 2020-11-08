@@ -1,6 +1,7 @@
 package com.modmcdl.voidaicdepths;
 
 import com.modmcdl.voidaicdepths.init.*;
+import com.modmcdl.voidaicdepths.util.BioluminescentRender;
 import com.modmcdl.voidaicdepths.world.gen.OreGeneration;
 import com.modmcdl.voidaicdepths.world.gen.VoidStructureGen;
 import net.minecraft.client.renderer.RenderType;
@@ -92,6 +93,9 @@ public class VoidaicDepths
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_LANTERN.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_WEEDS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_BULB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.TWISTED_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_STEM.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getTranslucent());
     }
 
     @SubscribeEvent

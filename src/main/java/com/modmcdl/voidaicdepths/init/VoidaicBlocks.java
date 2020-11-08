@@ -2,6 +2,7 @@ package com.modmcdl.voidaicdepths.init;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
 import com.modmcdl.voidaicdepths.blocks.VoidPlant;
+import com.modmcdl.voidaicdepths.blocks.VoidStalk;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -38,6 +39,10 @@ public class VoidaicBlocks
 
     public static final RegistryObject<Block> VOID_WEEDS = BLOCKS.register("void_weeds", () -> new VoidPlant(Block.Properties.from(Blocks.GRASS)));
     public static final RegistryObject<Block> VOID_BULB = BLOCKS.register("void_bulb", () -> new VoidPlant(Block.Properties.from(Blocks.POPPY)));
+    public static final RegistryObject<Block> TWISTED_SHRUB = BLOCKS.register("twisted_shrub", () -> new VoidPlant((Block.Properties.from(Blocks.DEAD_BUSH))));
+
+    public static final RegistryObject<Block> VOID_STALK_STEM = BLOCKS.register("void_stalk_stem", () -> new VoidStalk(Block.Properties.from(Blocks.BAMBOO).doesNotBlockMovement()));
+    public static final RegistryObject<Block> VOID_STALK_BLOSSOM = BLOCKS.register("void_stalk_bulb", () -> new VoidStalk(Block.Properties.from(Blocks.CHORUS_FLOWER).lightValue(10)));
 
         //UNDERWOOD TYPES
     //public static final RegistryObject<Block> UNDERWOOD_SAPLING = BLOCKS.register("underwood_sapling", () -> new UnderwoodSapling(() -> new UnderwoodTree(), Block.Properties.from(Blocks.OAK_SAPLING)));

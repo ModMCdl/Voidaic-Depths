@@ -28,7 +28,7 @@ public class VoidWellStructure extends Structure<NoFeatureConfig>
 
     @Override
     //Can be generated?
-    public boolean func_225558_a_(BiomeManager biomeManager, ChunkGenerator<?> chunkGenerator, Random random, int posX, int posZ, Biome biome)
+    public boolean canBeGenerated(BiomeManager biomeManager, ChunkGenerator<?> chunkGenerator, Random random, int posX, int posZ, Biome biome)
     {
         ChunkPos pos = this.getStartPositionForPosition(chunkGenerator, random, posX, posZ, 0, 0);
 
@@ -57,7 +57,7 @@ public class VoidWellStructure extends Structure<NoFeatureConfig>
             //ByteWise find center of chunk and surface
             int x = (chunkX << 4) + 7;
             int z = (chunkX << 4) + 7;
-            int y = generator.func_222531_c(x, z, Heightmap.Type.WORLD_SURFACE_WG);
+            int y = generator.getHeight(x, z, Heightmap.Type.WORLD_SURFACE_WG);
             BlockPos pos = new BlockPos(x, y, z);
 
             VoidWellPieces.start(templateManagerIn, pos, rotation, this.components, this.rand);

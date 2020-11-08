@@ -92,7 +92,7 @@ public class VoidWellPieces
 
         // create
         @Override
-        public boolean func_225577_a_(IWorld worldIn, ChunkGenerator<?> generator, Random randomIn,
+        public boolean create(IWorld worldIn, ChunkGenerator<?> generator, Random randomIn,
                                       MutableBoundingBox structureBoundingBoxIn, ChunkPos chunkPos) {
             PlacementSettings placementsettings = (new PlacementSettings()).setRotation(this.rotation)
                     .setMirror(Mirror.NONE);
@@ -100,7 +100,7 @@ public class VoidWellPieces
             this.templatePosition.add(Template.transformedBlockPos(placementsettings,
                     new BlockPos(0 - blockpos.getX(), 0, 0 - blockpos.getZ())));
 
-            return super.func_225577_a_(worldIn, generator, randomIn, structureBoundingBoxIn, chunkPos);
+            return super.create(worldIn, generator, randomIn, structureBoundingBoxIn, chunkPos);
         }
     }
 

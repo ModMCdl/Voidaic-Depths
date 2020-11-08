@@ -29,6 +29,10 @@
 
   "block.voidaicdepths.void_weeds": "Void Weeds",
   "block.voidaicdepths.void_bulb": "Void Bulb",
+  "block.voidaicdepths.twisted_shrub": "Twisted Shrub",
+
+  "block.voidaicdepths.void_stalk_stem": "Void Stalk",
+  "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",
 
   "itemGroup.voidaic_depths": "Voidaic Depths"
 

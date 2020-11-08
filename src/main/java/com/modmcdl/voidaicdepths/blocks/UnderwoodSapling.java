@@ -65,7 +65,7 @@ public class UnderwoodSapling extends BushBlock implements IGrowable
         else
         {
             if (!ForgeEventFactory.saplingGrowTree(worldIn, rand, pos)) return;
-            this.treeSupplier.get().func_225545_a_(worldIn, worldIn.getChunkProvider().getChunkGenerator(), pos, state, rand);
+            this.treeSupplier.get().place(worldIn, worldIn.getChunkProvider().getChunkGenerator(), pos, state, rand);
         }
     }
 
