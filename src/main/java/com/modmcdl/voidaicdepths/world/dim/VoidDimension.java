@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.gen.EndGenerationSettings;
 
 import javax.annotation.Nullable;
 

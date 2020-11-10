@@ -1,7 +1,6 @@
 package com.modmcdl.voidaicdepths;
 
 import com.modmcdl.voidaicdepths.init.*;
-import com.modmcdl.voidaicdepths.util.BioluminescentRender;
 import com.modmcdl.voidaicdepths.world.gen.OreGeneration;
 import com.modmcdl.voidaicdepths.world.gen.VoidStructureGen;
 import net.minecraft.client.renderer.RenderType;
@@ -61,7 +60,7 @@ public class VoidaicDepths
 
         VoidaicBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block ->
         {
-            final Item.Properties properties = new Item.Properties().group(VoidaicItemGroup.instance);
+            final Item.Properties properties = new Item.Properties().group(VoidaicItemGroup.VOIDTAB);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
@@ -95,7 +94,7 @@ public class VoidaicDepths
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_BULB.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.TWISTED_SHRUB.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_STEM.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getCutoutMipped());
     }
 
     @SubscribeEvent

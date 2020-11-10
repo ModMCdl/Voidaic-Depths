@@ -5,12 +5,12 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
 
-public class SparseVoidBiome extends Biome
+public class HauntedVoidBiome extends Biome
 {
-    public SparseVoidBiome(Builder biomeBuilder)
+    public HauntedVoidBiome(Builder biomeBuilder)
     {
         super(biomeBuilder);
-        addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.2F)));
+        addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.1F)));
 
     }
 

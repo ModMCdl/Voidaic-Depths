@@ -1,14 +1,11 @@
 package com.modmcdl.voidaicdepths.world.biomes;
 
-import com.modmcdl.voidaicdepths.init.VoidaicFeatures;
 import com.modmcdl.voidaicdepths.world.biomes.decorators.VoidDecorator;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.carver.WorldCarver;
-import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
-import net.minecraft.world.gen.placement.IPlacementConfig;
-import net.minecraft.world.gen.placement.Placement;
+
 
 public class LushVoidBiome extends Biome
 {

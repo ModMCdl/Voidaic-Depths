@@ -1,9 +1,13 @@
 {
   "item.voidaicdepths.arcane_salt": "Arcane Salt",
   "item.voidaicdepths.void_crystal": "Void Crystal",
+  "item.voidaicdepths.void_essence": "Voidaic Essence",
   "item.voidaicdepths.void_star": "Void Star",
   "item.voidaicdepths.void_nugget": "Void Nugget",
   "item.voidaicdepths.void_ingot": "Void Ingot",
+
+  "item.voidaicdepths.staff_of_translocation": "Staff of Translocation",
+  "item.voidaicdepths.staff_of_voidaic_charge": "Staff of Voidaic Charge",
 
   "block.voidaicdepths.voidstone": "Voidstone",
   "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",

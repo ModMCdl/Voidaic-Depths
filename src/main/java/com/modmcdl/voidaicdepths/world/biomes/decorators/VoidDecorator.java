@@ -22,6 +22,8 @@ public class VoidDecorator
     public static final BlockState TWISTED_SHRUBS = VoidaicBlocks.TWISTED_SHRUB.get().getDefaultState();
     public static final BlockClusterFeatureConfig TWISTED_SHRUB_CONFIG = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(TWISTED_SHRUBS), new SimpleBlockPlacer())).tries(4).build();
 
+
+
     public static final Feature<ProbabilityConfig> VOID_STALK = (new VoidStalkFeature(ProbabilityConfig::deserialize));
 
     public static void addVoidWeeds(Biome biomeIn)
@@ -41,7 +43,7 @@ public class VoidDecorator
 
     public static void addVoidStalks(Biome biomeIn)
     {
-        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, VOID_STALK.withConfiguration(new ProbabilityConfig(0.0F)).withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(40))));
+        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, VOID_STALK.withConfiguration(new ProbabilityConfig(0.0F)).withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(50))));
     }
 
 

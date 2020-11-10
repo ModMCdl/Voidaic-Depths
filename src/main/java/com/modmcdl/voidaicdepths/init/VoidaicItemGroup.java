@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 public class VoidaicItemGroup extends ItemGroup
 {
 
-    public static final VoidaicItemGroup instance = new VoidaicItemGroup(ItemGroup.GROUPS.length, "voidaic_depths");
+    public static final VoidaicItemGroup VOIDTAB  = new VoidaicItemGroup(ItemGroup.GROUPS.length, "voidaic_depths");
 
     private VoidaicItemGroup(int index, String label)
     {

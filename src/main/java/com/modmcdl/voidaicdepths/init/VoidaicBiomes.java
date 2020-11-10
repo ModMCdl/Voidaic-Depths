@@ -1,6 +1,7 @@
 package com.modmcdl.voidaicdepths.init;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
+import com.modmcdl.voidaicdepths.world.biomes.HauntedVoidBiome;
 import com.modmcdl.voidaicdepths.world.biomes.LushVoidBiome;
 import com.modmcdl.voidaicdepths.world.biomes.SparseVoidBiome;
 import net.minecraft.world.biome.Biome;
@@ -51,12 +52,30 @@ public class VoidaicBiomes
             .waterColor(1638437).waterFogColor(1638437)
             .precipitation(Biome.RainType.NONE)));
 
+    public static final RegistryObject<Biome> HAUNTED_VOID = BIOMES.register("haunted_void", () -> new HauntedVoidBiome(new Biome.Builder()
+            .surfaceBuilder(SurfaceBuilder.DEFAULT,
+                    new SurfaceBuilderConfig(
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState(),
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState(),
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState()
+                    )
+            )
+            .category(Biome.Category.DESERT)
+            .depth(0.1F)
+            .scale(0.2F)
+            .temperature(0.5F)
+            .downfall(0.5F)
+            .parent((String)null)
+            .waterColor(1638437).waterFogColor(1638437)
+            .precipitation(Biome.RainType.NONE)));
+
 
 
     public static void registerBiomes()
     {
         addBiomeToDictionary(SPARSE_VOID.get(), BiomeDictionary.Type.END);
         addBiomeToDictionary(LUSH_VOID.get(), BiomeDictionary.Type.END);
+        addBiomeToDictionary(HAUNTED_VOID.get(), BiomeDictionary.Type.END);
     }
 
     //Add biome to dictionary
