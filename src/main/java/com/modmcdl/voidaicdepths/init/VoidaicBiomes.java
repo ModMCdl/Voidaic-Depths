@@ -4,6 +4,7 @@ import com.modmcdl.voidaicdepths.VoidaicDepths;
 import com.modmcdl.voidaicdepths.world.biomes.HauntedVoidBiome;
 import com.modmcdl.voidaicdepths.world.biomes.LushVoidBiome;
 import com.modmcdl.voidaicdepths.world.biomes.SparseVoidBiome;
+import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;

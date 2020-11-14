@@ -16,10 +16,14 @@ import net.minecraft.world.server.ServerWorld;
 
 public class TranslocationStaff extends Item
     {
+
+
         public TranslocationStaff(Properties properties)
         {
             super(properties);
         }
+
+
 
         @Override
         public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)

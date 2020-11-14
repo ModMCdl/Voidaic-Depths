@@ -1,3 +1,7 @@
 {
-  "parent": "voidaicdepths:block/void_stalk_stem_1"
+  "parent": "item/generated",
+  "textures":
+  {
+    "layer0": "voidaicdepths:blocks/void_stalk_vine"
+  }
 }

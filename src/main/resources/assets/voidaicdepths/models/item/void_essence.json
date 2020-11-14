@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "voidaicdepths:items/voidaic_essence"
+    "layer0": "voidaicdepths:items/void_essence"
   }
 }

@@ -21,4 +21,6 @@ public class VoidPlant extends BushBlock
         Block block = state.getBlock();
         return block == VoidaicBlocks.VOIDSTONE.get() || block == VoidaicBlocks.VOID_ORE.get() || block == VoidaicBlocks.OVERGROWN_VOIDSTONE.get();
     }
+
+
 }

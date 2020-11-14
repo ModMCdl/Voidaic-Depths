@@ -11,6 +11,7 @@
 
   "block.voidaicdepths.voidstone": "Voidstone",
   "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
+  "block.voidaicdepths.void_sand": "Void Sand",
   "block.voidaicdepths.voidstone_pillar": "Voidstone Pillar",
   "block.voidaicdepths.voidstone_tiles": "Voidstone Tiles",
   "block.voidaicdepths.cracked_voidstone_tiles": "Cracked Voidstone Tiles",
@@ -24,6 +25,8 @@
 
   "block.voidaicdepths.void_ore": "Void Ore",
 
+  "block.voidaicdepths.void_cloud": "Void Cloud",
+
   "block.voidaicdepths.void_lantern": "Void Lantern",
 
   "block.voidaicdepths.underwood_log": "Underwood Log",
@@ -34,6 +37,7 @@
   "block.voidaicdepths.void_weeds": "Void Weeds",
   "block.voidaicdepths.void_bulb": "Void Bulb",
   "block.voidaicdepths.twisted_shrub": "Twisted Shrub",
+  "block.voidaicdepths.voidshroom": "Voidshroom",
 
   "block.voidaicdepths.void_stalk_stem": "Void Stalk",
   "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",

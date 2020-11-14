@@ -23,8 +23,8 @@ public class VoidaicItems
     public static final RegistryObject<Item> VOID_NUGGET = ITEMS.register("void_nugget", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
     public static final RegistryObject<Item> VOID_INGOT = ITEMS.register("void_ingot", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
 
-    public static final RegistryObject<Item> TRANSLOCATION_STAFF = ITEMS.register("staff_of_translocation", () -> new TranslocationStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
-    public static final RegistryObject<Item> VOID_CHARGE_STAFF = ITEMS.register("staff_of_voidaic_charge", () -> new VoidChargeStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
+    public static final RegistryObject<Item> TRANSLOCATION_STAFF = ITEMS.register("staff_of_translocation", () -> new TranslocationStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB).maxStackSize(1)));
+    public static final RegistryObject<Item> VOID_CHARGE_STAFF = ITEMS.register("staff_of_voidaic_charge", () -> new VoidChargeStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB).maxStackSize(1)));
 
 
     //SpecialRenderItem w/ Enchantment glint

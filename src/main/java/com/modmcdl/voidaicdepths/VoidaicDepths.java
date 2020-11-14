@@ -93,8 +93,10 @@ public class VoidaicDepths
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_WEEDS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_BULB.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.TWISTED_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOIDSHROOM.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_CLOUD.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_STEM.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getTranslucent());
     }
 
     @SubscribeEvent

@@ -1,5 +1,6 @@
 package com.modmcdl.voidaicdepths.world.biomes;
 
+import com.modmcdl.voidaicdepths.world.biomes.decorators.VoidDecorator;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.carver.WorldCarver;
@@ -11,6 +12,8 @@ public class HauntedVoidBiome extends Biome
     {
         super(biomeBuilder);
         addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.1F)));
+        VoidDecorator.addVoidshrooms(this);
+        VoidDecorator.addVoidSandpits(this);
 
     }
 
