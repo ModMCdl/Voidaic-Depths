@@ -33,6 +33,16 @@ public class VoidTeleporter implements ITeleporter
     @Override
     public Entity placeEntity(Entity entity, ServerWorld currentWorld, ServerWorld destWorld, float yaw, Function<Boolean, Entity> repositionEntity)
     {
+        BlockPos pos;
+
+        if(destWorld.dimension.getType() == DimensionType.byName(VoidaicDepths.VOID_DIM_TYPE))
+        {
+            pos = destWorld.getSpawnCoordinate();
+        }
+        else if(destWorld.dimension.getType() == DimensionType.OVERWORLD)
+        {
+            pos = destWorld.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, destWorld.getSpawnPoint());
+        }
         return repositionEntity.apply(false);
     }
 }

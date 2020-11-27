@@ -12,7 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class VoidaicItems
 {
-
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, VoidaicDepths.MODID);
 
     public static final RegistryObject<Item> ARCANE_SALT = ITEMS.register("arcane_salt", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
@@ -20,6 +19,8 @@ public class VoidaicItems
     public static final RegistryObject<Item> VOID_CRYSTAL = ITEMS.register("void_crystal", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
 
     public static final RegistryObject<Item> VOID_STAR = ITEMS.register("void_star", () -> new SpecialRenderItem(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
+    public static final RegistryObject<Item> ATTUNED_ENDER_PEARL = ITEMS.register("attuned_ender_pearl", () -> new SpecialRenderItem(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
+    public static final RegistryObject<Item> VOID_EYE = ITEMS.register("eye_of_the_void", () -> new SpecialRenderItem(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
     public static final RegistryObject<Item> VOID_NUGGET = ITEMS.register("void_nugget", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
     public static final RegistryObject<Item> VOID_INGOT = ITEMS.register("void_ingot", () -> new Item(new Item.Properties().group(VoidaicItemGroup.VOIDTAB)));
 
@@ -35,5 +36,4 @@ public class VoidaicItems
         public boolean hasEffect(ItemStack stack)
         { return true; }
     }
-
 }

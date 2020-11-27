@@ -37,7 +37,7 @@ public class VoidaicBlocks
 
     public static final RegistryObject<Block> VOID_ORE = BLOCKS.register("void_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F,3.0F).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
-    public static final RegistryObject<Block> VOID_CLOUD = BLOCKS.register("void_cloud", () -> new Block(Block.Properties.from(Blocks.COBWEB)));
+    //public static final RegistryObject<Block> VOID_CLOUD = BLOCKS.register("void_cloud", () -> new Block(Block.Properties.from(Blocks.COBWEB)));
 
     public static final RegistryObject<Block> VOID_LANTERN = BLOCKS.register("void_lantern", () -> new LanternBlock(Block.Properties.from(Blocks.LANTERN)));
 
@@ -45,6 +45,7 @@ public class VoidaicBlocks
     public static final RegistryObject<Block> VOID_BULB = BLOCKS.register("void_bulb", () -> new VoidPlant(Block.Properties.from(Blocks.POPPY)));
     public static final RegistryObject<Block> TWISTED_SHRUB = BLOCKS.register("twisted_shrub", () -> new VoidPlant((Block.Properties.from(Blocks.DEAD_BUSH))));
     public static final RegistryObject<Block> VOIDSHROOM = BLOCKS.register("voidshroom", () -> new VoidPlant((Block.Properties.from(Blocks.RED_MUSHROOM))));
+    public static final RegistryObject<Block> NIGHTBLOOM = BLOCKS.register("nightbloom", () -> new VoidPlant((Block.Properties.from(Blocks.POPPY))));
 
 
     public static final RegistryObject<Block> VOID_STALK_STEM = BLOCKS.register("void_stalk_stem", () -> new VoidStalk(Block.Properties.from(Blocks.BAMBOO).doesNotBlockMovement()));

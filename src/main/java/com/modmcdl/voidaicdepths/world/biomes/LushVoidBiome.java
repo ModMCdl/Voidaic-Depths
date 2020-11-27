@@ -15,6 +15,7 @@ public class LushVoidBiome extends Biome
         addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.2F)));
         VoidDecorator.addVoidWeeds(this);
         VoidDecorator.addVoidBulbs(this);
+        VoidDecorator.addNightblooms(this);
         VoidDecorator.addTwistedShrubs(this);
         VoidDecorator.addVoidStalks(this);
     }
