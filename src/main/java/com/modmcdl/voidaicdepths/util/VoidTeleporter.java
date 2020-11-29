@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 import java.util.Random;
 import java.util.function.Function;
 
-
+//defunct
 public class VoidTeleporter implements ITeleporter
 {
         protected final ServerWorld world;

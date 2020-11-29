@@ -2,6 +2,7 @@ package com.modmcdl.voidaicdepths.items;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
 import com.modmcdl.voidaicdepths.util.VoidTeleporter;
+import com.modmcdl.voidaicdepths.util.VoidTeleporter2;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,19 +23,17 @@ public class TranslocationStaff extends Item
         @Override
         public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
         {
-           /* BlockPos blockpos;
-            DimensionType dimensiontype = player.dimension;
-            ServerWorld serverworld = player.getServer().getWorld(dimensiontype); */
 
-           if (!world.isRemote)
+            if(player.world instanceof ServerWorld)
+            {
+                VoidTeleporter2.VOID_TELEPORTER.voidTeleporter(player);
+            }
+
+            //OldScript
+           /*if (!world.isRemote)
            {
-              /* if (dimensiontype == DimensionType.byName(VoidaicDepths.VOID_DIM_TYPE))
-               {
-                   blockpos = serverworld.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, serverworld.getSpawnPoint());
-               }*/
-
                player.changeDimension(world.dimension.getType() == DimensionType.byName(VoidaicDepths.VOID_DIM_TYPE) ? DimensionType.OVERWORLD : DimensionType.byName(VoidaicDepths.VOID_DIM_TYPE), new VoidTeleporter((ServerWorld) player.getEntityWorld()));
-           }
+           }*/
 
            return super.onItemRightClick(world, player, hand);
         }
