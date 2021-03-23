@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model":  "voidaicdepths:block/underwood_slab" },
+    "type=top": { "model":  "voidaicdepths:block/underwood_slab_top" },
+    "type=double": { "model":  "voidaicdepths:block/underwood_planks" }
+  }
+}
