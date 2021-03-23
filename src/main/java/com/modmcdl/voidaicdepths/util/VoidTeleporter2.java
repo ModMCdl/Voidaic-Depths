@@ -1,11 +1,14 @@
 package com.modmcdl.voidaicdepths.util;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
+import com.modmcdl.voidaicdepths.init.VoidaicBlocks;
 import com.modmcdl.voidaicdepths.init.VoidaicDimensions;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunk;
@@ -14,12 +17,14 @@ import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.LogicalSidedProvider;
+import org.apache.logging.log4j.core.jmx.Server;
 
 public class VoidTeleporter2
 {
     public static final VoidTeleporter2 VOID_TELEPORTER = new VoidTeleporter2();
 
-    public VoidTeleporter2(){}
+    public VoidTeleporter2(){
+    }
 
     public void voidTeleporter(Entity entity)
     {
@@ -42,10 +47,34 @@ public class VoidTeleporter2
         int surface = iChunk.getTopBlockY(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, newPos.getX(), newPos.getZ()) +1;
         BlockPos surfacePos = new BlockPos(newPos.getX(), surface, newPos.getZ());
 
-        Vec3d repositionedPos = new Vec3d(newPos.getX() + 0.5, surfacePos.getY(), newPos.getZ() + 0.5);
-        Entity repositionedEntity = this.repositionEntity(entity, world, repositionedPos);
-        repositionedEntity.fallDistance = 0.0F;
+        if (dimensionType == DimensionType.byName(VoidaicDepths.VOID_DIM_TYPE)) {
+            Vec3d repositionedPos = new Vec3d(newPos.getX() + 0.5, newPos.getY(), newPos.getZ() + 0.5);
+            Entity repositionedEntity = this.repositionEntity(entity, world, repositionedPos);
+            repositionedEntity.fallDistance = 0.0F;
 
+            int i = MathHelper.floor(newPos.getX());
+            int j = MathHelper.floor(newPos.getY()) - 1;
+            int k = MathHelper.floor(newPos.getZ());
+            int l = 1;
+            int i1 = 0;
+
+            for (int j1 = -2; j1 <= 2; ++j1) {
+                for (int k1 = -2; k1 <= 2; ++k1) {
+                    for (int l1 = -1; l1 < 3; ++l1) {
+                        int i2 = i + k1 * 1 + j1 * 0;
+                        int j2 = j + l1;
+                        int k2 = k + k1 * 0 - j1 * 1;
+                        boolean flag = l1 < 0;
+                        world.setBlockState(new BlockPos(i2, j2, k2), flag ? VoidaicBlocks.VOIDSTONE.get().getDefaultState() : Blocks.AIR.getDefaultState());
+                    }
+                }
+            }
+        }
+        else if (dimensionType == DimensionType.OVERWORLD) {
+            Vec3d repositionedPos = new Vec3d(newPos.getX() + 0.5, surface, newPos.getZ() + 0.5);
+            Entity repositionedEntity = this.repositionEntity(entity, world, repositionedPos);
+            repositionedEntity.fallDistance = 0.0F;
+        }
     }
 
     private Entity repositionEntity(Entity entity, ServerWorld serverWorld, Vec3d vec3d)

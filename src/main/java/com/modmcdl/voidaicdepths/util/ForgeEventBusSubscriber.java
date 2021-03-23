@@ -2,16 +2,18 @@ package com.modmcdl.voidaicdepths.util;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
 import com.modmcdl.voidaicdepths.init.VoidaicDimensions;
+import com.modmcdl.voidaicdepths.init.VoidaicMobs;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.event.world.RegisterDimensionsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = VoidaicDepths.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeEventBusSubscriber
 {
-
     //Register Dimension
     @SubscribeEvent
     public static void registerDimensions(final RegisterDimensionsEvent event)
@@ -24,8 +26,4 @@ public class ForgeEventBusSubscriber
 
         VoidaicDepths.LOGGER.info("The Depths of the Void have been loaded. . .");
     }
-
-
-
-
 }

@@ -12,7 +12,7 @@ public class HauntedVoidBiome extends Biome
     {
         super(biomeBuilder);
         addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.8F)));
-        VoidDecorator.addVoidshrooms(this);
+        VoidDecorator.addTwistedShrubs(this);
         VoidDecorator.addVoidSandpits(this);
 
     }

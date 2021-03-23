@@ -4,6 +4,9 @@ package com.modmcdl.voidaicdepths.init;
 import com.modmcdl.voidaicdepths.VoidaicDepths;
 import com.modmcdl.voidaicdepths.items.TranslocationStaff;
 import com.modmcdl.voidaicdepths.items.VoidChargeStaff;
+import com.modmcdl.voidaicdepths.items.VoidGoggles;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.RegistryObject;
@@ -26,6 +29,8 @@ public class VoidaicItems
 
     public static final RegistryObject<Item> TRANSLOCATION_STAFF = ITEMS.register("staff_of_translocation", () -> new TranslocationStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB).maxStackSize(1)));
     public static final RegistryObject<Item> VOID_CHARGE_STAFF = ITEMS.register("staff_of_voidaic_charge", () -> new VoidChargeStaff(new Item.Properties().group(VoidaicItemGroup.VOIDTAB).maxStackSize(1)));
+
+    public static final RegistryObject<Item> VOID_GOGGLES = ITEMS.register("void_goggles", () -> new VoidGoggles(VoidaicArmorMaterials.VOIDGOGGLESMATERIAL, EquipmentSlotType.HEAD, new Item.Properties().group(VoidaicItemGroup.VOIDTAB).maxStackSize(1)));
 
 
     //SpecialRenderItem w/ Enchantment glint

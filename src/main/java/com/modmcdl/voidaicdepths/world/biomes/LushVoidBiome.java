@@ -1,6 +1,9 @@
 package com.modmcdl.voidaicdepths.world.biomes;
 
+import com.modmcdl.voidaicdepths.init.VoidaicMobs;
 import com.modmcdl.voidaicdepths.world.biomes.decorators.VoidDecorator;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.carver.WorldCarver;
@@ -16,6 +19,7 @@ public class LushVoidBiome extends Biome
         VoidDecorator.addVoidWeeds(this);
         VoidDecorator.addVoidBulbs(this);
         VoidDecorator.addNightblooms(this);
+        VoidDecorator.addVoidshrooms(this);
         VoidDecorator.addTwistedShrubs(this);
         VoidDecorator.addVoidStalks(this);
     }

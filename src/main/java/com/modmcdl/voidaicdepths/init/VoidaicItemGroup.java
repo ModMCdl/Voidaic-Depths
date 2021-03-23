@@ -16,7 +16,7 @@ public class VoidaicItemGroup extends ItemGroup
 
     public ItemStack createIcon()
     {
-        return new ItemStack(VoidaicItems.VOID_STAR.get());
+        return new ItemStack(VoidaicBlocks.VOID_LANTERN.get().asItem());
     }
 
 }

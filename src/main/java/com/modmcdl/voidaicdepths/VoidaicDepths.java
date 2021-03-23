@@ -1,6 +1,10 @@
 package com.modmcdl.voidaicdepths;
 
+
+import com.modmcdl.voidaicdepths.entities.render.VoidcatRender;
 import com.modmcdl.voidaicdepths.init.*;
+import com.modmcdl.voidaicdepths.util.BioluminescentRender;
+import com.modmcdl.voidaicdepths.util.VoidaicCreatureSpawns;
 import com.modmcdl.voidaicdepths.world.gen.OreGeneration;
 import com.modmcdl.voidaicdepths.world.gen.VoidStructureGen;
 import net.minecraft.client.renderer.RenderType;
@@ -13,7 +17,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -45,6 +51,7 @@ public class VoidaicDepths
         VoidaicItems.ITEMS.register(modEventBus); //Register Item List
         VoidaicBlocks.BLOCKS.register(modEventBus); //Register Normal Block List
         //VoidaicBlocks.SPECIAL_BLOCKS.register(modEventBus); //Register Special Block List
+        VoidaicMobs.ENTITIES.register(modEventBus); //Register Mob List
         VoidaicBiomes.BIOMES.register(modEventBus); //Register Biome List
         VoidaicDimensions.DIMENSION.register(modEventBus); //Register Dim List
         VoidaicFeatures.FEATURES.register(modEventBus); //Register Features
@@ -85,10 +92,12 @@ public class VoidaicDepths
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        VoidaicCreatureSpawns.creatureSpawnList();
     }
 
     private void clientStart(final FMLClientSetupEvent event)
     {
+        //Item RenderTypes
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_LANTERN.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_WEEDS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_BULB.get(), RenderType.getCutout());
@@ -97,6 +106,9 @@ public class VoidaicDepths
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOIDSHROOM.get(), RenderType.getCutout());;
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_STEM.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(VoidaicBlocks.VOID_STALK_BLOSSOM.get(), RenderType.getTranslucent());
+        //Entity Renders
+        RenderingRegistry.registerEntityRenderingHandler(VoidaicMobs.VOIDCAT.get(), VoidcatRender::new);
+
     }
 
     @SubscribeEvent

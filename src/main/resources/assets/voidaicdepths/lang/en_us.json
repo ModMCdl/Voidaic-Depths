@@ -12,6 +12,8 @@
   "item.voidaicdepths.staff_of_translocation": "Staff of Translocation",
   "item.voidaicdepths.staff_of_voidaic_charge": "Staff of Voidaic Charge",
 
+  "item.voidaicdepths.void_goggles": "Void Googles of Clairvoyance",
+
   "block.voidaicdepths.voidstone": "Voidstone",
   "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
   "block.voidaicdepths.void_sand": "Void Sand",
@@ -39,13 +41,16 @@
 
   "block.voidaicdepths.void_weeds": "Void Weeds",
   "block.voidaicdepths.void_bulb": "Void Bulb",
+  "block.voidaicdepths.nightbloom": "Nightbloom",
   "block.voidaicdepths.twisted_shrub": "Twisted Shrub",
   "block.voidaicdepths.voidshroom": "Voidshroom",
 
   "block.voidaicdepths.void_stalk_stem": "Void Stalk",
   "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",
 
-  "itemGroup.voidaic_depths": "Voidaic Depths"
+  "itemGroup.voidaic_depths": "Voidaic Depths",
+
+  "entity.voidiac_depths.void_fly": "Void Fly"
 
 
 }

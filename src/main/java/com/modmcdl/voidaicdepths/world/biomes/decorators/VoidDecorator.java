@@ -8,10 +8,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureRadiusConfig;
-import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 
@@ -31,6 +28,7 @@ public class VoidDecorator
 
     public static final Feature<ProbabilityConfig> VOID_STALK = (new VoidStalkFeature(ProbabilityConfig::deserialize));
     public static final Feature<FeatureRadiusConfig> VOID_SANDPITS = (new SandPatchFeature(FeatureRadiusConfig::deserialize));
+    
 
 
     public static void addVoidWeeds(Biome biomeIn)
