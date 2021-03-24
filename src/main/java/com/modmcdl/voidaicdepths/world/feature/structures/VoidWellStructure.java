@@ -34,13 +34,40 @@ public class VoidWellStructure extends Structure<NoFeatureConfig>
 
         if(posX == pos.x && posZ == pos.z)
         {
-          if(chunkGenerator.hasStructure(biome, this)) //if biome has structure then true
-          {
-              return true;
-          }
+            if(chunkGenerator.hasStructure(biome, this)) //if biome has structure then true
+            {
+                int i = getYPosForStructure(posX, posZ, chunkGenerator);
+                return i >= 40;
+            }
+            else {
+                return false;
+            }
+        } else{
+            return false;
+        }
+    }
+
+    private static int getYPosForStructure(int chunkX, int chunkY, ChunkGenerator<?> generatorIn) {
+        Random random = new Random((long)(chunkX + chunkY * 10387313));
+        Rotation rotation = Rotation.values()[random.nextInt(Rotation.values().length)];
+        int i = 5;
+        int j = 5;
+        if (rotation == Rotation.CLOCKWISE_90) {
+            i = -5;
+        } else if (rotation == Rotation.CLOCKWISE_180) {
+            i = -5;
+            j = -5;
+        } else if (rotation == Rotation.COUNTERCLOCKWISE_90) {
+            j = -5;
         }
 
-        return false;
+        int k = (chunkX << 4) + 7;
+        int l = (chunkY << 4) + 7;
+        int i1 = generatorIn.getNoiseHeightMinusOne(k, l, Heightmap.Type.WORLD_SURFACE_WG);
+        int j1 = generatorIn.getNoiseHeightMinusOne(k, l + j, Heightmap.Type.WORLD_SURFACE_WG);
+        int k1 = generatorIn.getNoiseHeightMinusOne(k + i, l, Heightmap.Type.WORLD_SURFACE_WG);
+        int l1 = generatorIn.getNoiseHeightMinusOne(k + i, l + j, Heightmap.Type.WORLD_SURFACE_WG);
+        return Math.min(Math.min(i1, j1), Math.min(k1, l1));
     }
 
     public static class Start extends StructureStart

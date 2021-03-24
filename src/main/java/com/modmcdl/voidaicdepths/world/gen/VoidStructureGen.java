@@ -26,7 +26,7 @@ public class VoidStructureGen
                 biome.addStructure(VoidaicFeatures.VOID_WELL.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             }
 
-            biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, VoidaicFeatures.VOID_WELL.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
+            biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, VoidaicFeatures.VOID_WELL.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.TOP_SOLID_HEIGHTMAP.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 
         }
     }
