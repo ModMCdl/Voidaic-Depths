@@ -20,28 +20,37 @@ public class VoidStalkFeature extends Feature<ProbabilityConfig>
     private static final BlockState STALK_BASE;
     private static final BlockState STALK_BULB;
 
-    public VoidStalkFeature(Function<Dynamic<?>, ? extends ProbabilityConfig> p_i49919_1_) {
-        super(p_i49919_1_);
+    public VoidStalkFeature(Function<Dynamic<?>, ? extends ProbabilityConfig> dynamicFunction)
+    {
+        super(dynamicFunction);
     }
 
-    public boolean place(IWorld world, ChunkGenerator<? extends GenerationSettings> chunkGen, Random random, BlockPos pos, ProbabilityConfig probabilityConfig) {
+    public boolean place(IWorld world, ChunkGenerator<? extends GenerationSettings> chunkGen, Random random, BlockPos pos, ProbabilityConfig probabilityConfig)
+    {
         int i = 0;
         BlockPos.Mutable pos1 = new BlockPos.Mutable(pos);
         BlockPos.Mutable pos2 = new BlockPos.Mutable(pos);
-        if (world.isAirBlock(pos1)) {
-            if (VoidaicBlocks.VOID_STALK_STEM.get().getDefaultState().isValidPosition(world, pos1)) {
+        if (world.isAirBlock(pos1))
+        {
+            if (VoidaicBlocks.VOID_STALK_STEM.get().getDefaultState().isValidPosition(world, pos1))
+            {
                 int posY = random.nextInt(2) + 5;
-                int lvt_10_1_;
-                if (random.nextFloat() < probabilityConfig.probability) {
-                    lvt_10_1_ = random.nextInt(4) + 1;
+                int hieghtY;
+                if (random.nextFloat() < probabilityConfig.probability)
+                {
+                    hieghtY = random.nextInt(4) + 1;
 
-                    for(int posX = pos.getX() - lvt_10_1_; posX <= pos.getX() + lvt_10_1_; ++posX) {
-                        for(int posZ = pos.getZ() - lvt_10_1_; posZ <= pos.getZ() + lvt_10_1_; ++posZ) {
-                            int lvt_13_1_ = posX - pos.getX();
-                            int lvt_14_1_ = posZ - pos.getZ();
-                            if (lvt_13_1_ * lvt_13_1_ + lvt_14_1_ * lvt_14_1_ <= lvt_10_1_ * lvt_10_1_) {
+                    for(int posX = pos.getX() - hieghtY; posX <= pos.getX() + hieghtY; ++posX)
+                    {
+                        for(int posZ = pos.getZ() - hieghtY; posZ <= pos.getZ() + hieghtY; ++posZ)
+                        {
+                            int locationX = posX - pos.getX();
+                            int locationZ = posZ - pos.getZ();
+                            if (locationX * locationX + locationZ * locationZ <= hieghtY * hieghtY)
+                            {
                                 pos2.setPos(posX, world.getHeight(Heightmap.Type.WORLD_SURFACE, posX, posZ) - 1, posZ);
-                                if (isDirt(world.getBlockState(pos2).getBlock())) {
+                                if (isDirt(world.getBlockState(pos2).getBlock()))
+                                {
                                     world.setBlockState(pos2, VoidaicBlocks.OVERGROWN_VOIDSTONE.get().getDefaultState(), 2);
                                 }
                             }
@@ -49,12 +58,14 @@ public class VoidStalkFeature extends Feature<ProbabilityConfig>
                     }
                 }
 
-                for(lvt_10_1_ = 0; lvt_10_1_ < posY && world.isAirBlock(pos1); ++lvt_10_1_) {
+                for(hieghtY = 0; hieghtY < posY && world.isAirBlock(pos1); ++hieghtY)
+                {
                     world.setBlockState(pos1, STALK_BASE, 2);
                     pos1.move(Direction.UP, 1);
                 }
 
-                if (pos1.getY() - pos.getY() >= 3) {
+                if (pos1.getY() - pos.getY() >= 3)
+                {
                     world.setBlockState(pos1, STALK_BULB, 2);
                     world.setBlockState(pos1.move(Direction.DOWN, 1), STALK_BASE, 2);
                     world.setBlockState(pos1.move(Direction.DOWN, 1), STALK_BASE, 2);
@@ -67,7 +78,8 @@ public class VoidStalkFeature extends Feature<ProbabilityConfig>
         return i > 0;
     }
 
-    static {
+    static
+    {
         STALK_BASE = (BlockState)((BlockState)((BlockState) VoidaicBlocks.VOID_STALK_STEM.get().getDefaultState()));
         STALK_BULB = (BlockState)((BlockState)((BlockState) VoidaicBlocks.VOID_STALK_BLOSSOM.get().getDefaultState()));
     }
