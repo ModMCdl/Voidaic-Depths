@@ -17,10 +17,10 @@ public class VoidChunkGenerator extends NoiseChunkGenerator<VoidGenerationSettin
     }
 
     protected void fillNoiseColumn(double[] noiseColumn, int noiseX, int noiseZ) {
-        double d0 = 2368.824D;
-        double d1 = 684.412D;
-        double d2 = 317.110300000000002D;
-        double d3 = 4.277575000000001D;
+        double d0 = 3370.0D;
+        double d1 = 700.0D;
+        double d2 = 50.0D;
+        double d3 = 10.0D;
         int i = 64;
         int j = -3000;
         this.calcNoiseColumn(noiseColumn, noiseX, noiseZ, d0, d1, d2, d3, i, j);

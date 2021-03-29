@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 public class VoidSand extends FallingBlock
 {
 
-    protected static final VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+    protected static final VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
 
     public VoidSand(Properties properties)
     {
@@ -33,5 +33,8 @@ public class VoidSand extends FallingBlock
         entityIn.setMotionMultiplier(state, new Vec3d(0.25D, (double)0.05F, 0.25D));
     }
 
-
+    @Override
+    public boolean causesSuffocation(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return true;
+    }
 }

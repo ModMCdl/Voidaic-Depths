@@ -22,7 +22,7 @@ public class VoidaicBlocks
     //Blocks
         //VOIDSTONE TYPES ie. F_BLOCKS, STAIRS, SLABS, WALLS
     public static final RegistryObject<Block> VOIDSTONE = BLOCKS.register("voidstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)));
-    public static final RegistryObject<Block> OVERGROWN_VOIDSTONE = BLOCKS.register( "overgrown_voidstone", () -> new Block(Block.Properties.from(VoidaicBlocks.VOIDSTONE.get())));
+    public static final RegistryObject<Block> OVERGROWN_VOIDSTONE = BLOCKS.register( "overgrown_voidstone", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.WET_GRASS)));
     public static final RegistryObject<Block> VOID_SAND = BLOCKS.register("void_sand", () -> new VoidSand(Block.Properties.from(Blocks.SAND)));
     public static final RegistryObject<Block> VOIDSTONE_PILLAR = BLOCKS.register("voidstone_pillar", () -> new RotatedPillarBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)));
     public static final RegistryObject<Block> VOIDSTONE_TILES = BLOCKS.register("voidstone_tiles", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5F, 6.0F)));
