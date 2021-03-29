@@ -25,7 +25,10 @@ public class VoidSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig>
         int i = rand.nextInt(3);
         if (i == 0)
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed,
-                    new SurfaceBuilderConfig(VoidaicBlocks.VOIDSTONE.get().getDefaultState(), VoidaicBlocks.VOIDSTONE.get().getDefaultState(), VoidaicBlocks.VOIDSTONE.get().getDefaultState()));
+                    new SurfaceBuilderConfig(
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState(),
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState(),
+                            VoidaicBlocks.VOIDSTONE.get().getDefaultState()));
         else
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed,
                     new SurfaceBuilderConfig(i == 1 ? VoidaicBlocks.VOIDSTONE.get().getDefaultState() : VoidaicBlocks.VOIDSTONE.get().getDefaultState(), VoidaicBlocks.VOIDSTONE.get().getDefaultState(), VoidaicBlocks.VOIDSTONE.get().getDefaultState()));
