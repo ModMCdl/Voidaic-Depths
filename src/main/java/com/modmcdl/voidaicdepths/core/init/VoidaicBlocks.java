@@ -34,13 +34,13 @@ public class VoidaicBlocks
 
     public static final Block VOID_ORE = create("void_ore", new Block(FabricBlockSettings.of(Material.STONE).hardness(3.0F).resistance(6.0F).breakByTool(FabricToolTags.PICKAXES, 2)));
 
-    public static final Block VOID_LANTERN = create("void_lantern", new LanternBlock(FabricBlockSettings.copy(Blocks.LANTERN)));
+    public static final Block VOID_LANTERN = create("void_lantern", new LanternBlock(FabricBlockSettings.copy(Blocks.LANTERN).nonOpaque()));
 
-    public static final Block VOID_WEEDS = create("void_weeds", new VoidPlant(FabricBlockSettings.copy(Blocks.GRASS)));
-    public static final Block VOID_BLOSSOM = create("void_blossom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY)));
-    public static final Block TWISTED_SHRUB = create("twisted_shrub", new VoidPlant(FabricBlockSettings.copy(Blocks.DEAD_BUSH)));
-    public static final Block VOIDSHROOM = create("voidshroom", new VoidPlant(FabricBlockSettings.copy(Blocks.RED_MUSHROOM)));
-    public static final Block NIGHTBLOOM = create("nightbloom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY)));
+    public static final Block VOID_WEEDS = create("void_weeds", new VoidPlant(FabricBlockSettings.copy(Blocks.GRASS).nonOpaque()));
+    public static final Block VOID_BLOSSOM = create("void_blossom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()));
+    public static final Block TWISTED_SHRUB = create("twisted_shrub", new VoidPlant(FabricBlockSettings.copy(Blocks.DEAD_BUSH).nonOpaque()));
+    public static final Block VOIDSHROOM = create("voidshroom", new VoidPlant(FabricBlockSettings.copy(Blocks.RED_MUSHROOM).nonOpaque()));
+    public static final Block NIGHTBLOOM = create("nightbloom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()));
 
 
     public static class BlockStairs extends StairsBlock
