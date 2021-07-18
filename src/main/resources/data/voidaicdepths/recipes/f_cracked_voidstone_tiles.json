@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient":
+  {
+    "item": "voidaicdepths:voidstone_tiles"
+  },
+  "result": "voidaicdepths:cracked_voidstone_tiles",
+  "experience": 0,
+  "cookingtime": 200
+}

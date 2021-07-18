@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L L",
+    "GVG",
+    "C C"
+  ],
+  "key":
+  {
+    "L":
+    {
+      "item": "minecraft:leather"
+    },
+    "V":
+    {
+      "item": "voidaicdepths:void_ingot"
+    },
+    "G":
+    {
+      "item": "minecraft:glass_pane"
+    },
+    "C":
+    {
+      "item": "voidaicdepths:void_crystal"
+    }
+  },
+  "result": {
+    "item": "voidaicdepths:void_goggles",
+    "count": 1
+  }
+}

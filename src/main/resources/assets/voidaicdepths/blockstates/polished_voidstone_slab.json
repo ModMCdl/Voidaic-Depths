@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model":  "voidaicdepths:block/polished_voidstone_slab" },
+    "type=top": { "model":  "voidaicdepths:block/polished_voidstone_slab_top" },
+    "type=double": { "model":  "voidaicdepths:block/polished_voidstone" }
+  }
+}

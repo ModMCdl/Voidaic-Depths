@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " NE",
+    " $N",
+    "$  "
+  ],
+  "key":
+  {
+    "$":
+    {
+      "item": "minecraft:stick"
+    },
+    "N":
+    {
+      "item": "voidaicdepths:void_nugget"
+    },
+    "E":
+    {
+      "item": "voidaicdepths:void_crystal"
+    }
+  },
+  "result":
+  {
+    "item": "voidaicdepths:staff_of_voidaic_charge",
+    "count": 1
+  }
+}
