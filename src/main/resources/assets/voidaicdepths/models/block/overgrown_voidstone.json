@@ -1,9 +1,9 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
-    "particle": "voidaicdepths:blocks/voidrock",
-    "bottom": "voidaicdepths:blocks/voidrock",
-    "top": "voidaicdepths:blocks/overgrown_voidrock_top",
-    "side": "voidaicdepths:blocks/overgrown_voidrock_side"
+    "particle": "voidaicdepths:blocks/voidstone",
+    "bottom": "voidaicdepths:blocks/voidstone",
+    "top": "voidaicdepths:blocks/overgrown_voidstone_top",
+    "side": "voidaicdepths:blocks/overgrown_voidstone"
   }
 }

@@ -17,6 +17,8 @@ public class VoidaicItems
     public static final Item VOID_CRYSTAL = create("void_crystal", new Item(group()));
     public static final Item ATTUNED_ENDER_PEARL = create("attuned_ender_pearl", new Item(group()));
 
+    public static final Item VOID_CARROT = create("void_carrot", new Item(group()));
+
     public static final Item VOID_INGOT = create("void_ingot", new Item(group()));
     public static final Item VOID_NUGGET = create("void_nugget", new Item(group()));
 

@@ -42,6 +42,11 @@ public class VoidaicBlocks
     public static final Block VOIDSHROOM = create("voidshroom", new VoidPlant(FabricBlockSettings.copy(Blocks.RED_MUSHROOM).nonOpaque()));
     public static final Block NIGHTBLOOM = create("nightbloom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()));
 
+    public static final Block UNDERWOOD_LOG = create("underwood_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)));
+    public static final Block UNDERWOOD_PLANKS = create("underwood_planks", new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)));
+    public static final Block UNDERWOOD_STAIRS = create("underwood_stairs", new BlockStairs(UNDERWOOD_PLANKS, FabricBlockSettings.copy(Blocks.OAK_STAIRS)));
+    public static final Block UNDERWOOD_SLAB = create("underwood_slab", new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_SLAB)));
+
 
     public static class BlockStairs extends StairsBlock
     {
