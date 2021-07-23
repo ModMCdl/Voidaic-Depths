@@ -1,6 +1,6 @@
 package com.modmcdl.voidaicdepths.client;
 
-import com.modmcdl.voidaicdepths.core.init.VoidaicBlocks;
+import com.modmcdl.voidaicdepths.core.init.VoidaicObjectRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,11 +14,11 @@ public class VoidaicDepthsClient implements ClientModInitializer
     public void onInitializeClient()
     {
         //Item Renderers
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.VOID_LANTERN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.VOID_WEEDS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.VOID_BLOSSOM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.NIGHTBLOOM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.TWISTED_SHRUB, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicBlocks.VOIDSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.VOID_LANTERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.VOID_WEEDS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.VOID_BLOSSOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.NIGHTBLOOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.TWISTED_SHRUB, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VoidaicObjectRegistry.VOIDSHROOM, RenderLayer.getCutout());
     }
 }

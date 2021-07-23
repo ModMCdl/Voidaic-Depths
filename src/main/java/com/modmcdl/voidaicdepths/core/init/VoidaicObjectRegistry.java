@@ -1,7 +1,6 @@
 package com.modmcdl.voidaicdepths.core.init;
 
 import com.modmcdl.voidaicdepths.VoidaicDepths;
-import com.modmcdl.voidaicdepths.core.blocks.VoidCrop;
 import com.modmcdl.voidaicdepths.core.blocks.VoidPlant;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -34,6 +33,8 @@ public class VoidaicObjectRegistry
     public static final Block VOIDSTONE_WALL = create("voidstone_wall", new WallBlock(FabricBlockSettings.copy(VOIDSTONE)), true);
     public static final Block POLISHED_VOIDSTONE_WALL = create("polished_voidstone_wall", new WallBlock(FabricBlockSettings.copy(POLISHED_VOIDSTONE)), true);
 
+    public static final Block VOID_PORTAL_FRAME = create("void_portal_frame", new EndPortalFrameBlock(FabricBlockSettings.copy(Blocks.END_PORTAL_FRAME)), true);
+
     public static final Block VOID_ORE = create("void_ore", new Block(FabricBlockSettings.of(Material.STONE).hardness(3.0F).resistance(6.0F).breakByTool(FabricToolTags.PICKAXES, 2)), true);
 
     public static final Block VOID_LANTERN = create("void_lantern", new LanternBlock(FabricBlockSettings.copy(Blocks.LANTERN).nonOpaque()), true);
@@ -43,8 +44,6 @@ public class VoidaicObjectRegistry
     public static final Block TWISTED_SHRUB = create("twisted_shrub", new VoidPlant(FabricBlockSettings.copy(Blocks.DEAD_BUSH).nonOpaque()), true);
     public static final Block VOIDSHROOM = create("voidshroom", new VoidPlant(FabricBlockSettings.copy(Blocks.RED_MUSHROOM).nonOpaque()), true);
     public static final Block NIGHTBLOOM = create("nightbloom", new VoidPlant(FabricBlockSettings.copy(Blocks.POPPY).nonOpaque()), true);
-
-    public static final Block VOID_CARROTS = create("void_carrots", new VoidCrop(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque()), false);
 
     public static final Block UNDERWOOD_LOG = create("underwood_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), true);
     public static final Block UNDERWOOD_PLANKS = create("underwood_planks", new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), true);
