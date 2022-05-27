@@ -11,10 +11,19 @@
   "item.voidaicdepths.void_nugget": "Void Nugget",
   "item.voidaicdepths.void_ingot": "Void Ingot",
 
+  "item.voidaicdepths.ossificum_ingot": "Ossificum Ingot",
+
   "item.voidaicdepths.staff_of_translocation": "Staff of Translocation",
   "item.voidaicdepths.staff_of_voidaic_charge": "Staff of Voidaic Charge",
 
   "item.voidaicdepths.void_goggles": "Void Googles of Clairvoyance",
+
+  "item.voidaicdepths.the_void_music_disc": "Music Disc",
+  "item.voidaicdepths.the_void_music_disc.desc": "ModMCdl - the void",
+  "item.voidaicdepths.remnants_music_disc": "Music Disc",
+  "item.voidaicdepths.remnants_music_disc.desc": "ModMCdl - remnants",
+  "item.voidaicdepths.ossify_music_disc": "Music Disc",
+  "item.voidaicdepths.ossify_music_disc.desc": "ModMCdl - ossify",
 
   "block.voidaicdepths.voidstone": "Voidstone",
   "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
@@ -39,9 +48,10 @@
   "block.voidaicdepths.void_lantern": "Void Lantern",
 
   "block.voidaicdepths.underwood_log": "Underwood Log",
-  "block.voidaiddepths.underwood_planks": "Underwood Planks",
-  "block.voidaiddepths.underwood_stairs": "Underwood Stairs",
-  "block.voidaiddepths.underwood_slab": "Underwood Slab",
+  "block.voidaicdepths.underwood_planks": "Underwood Planks",
+  "block.voidaicdepths.underwood_stairs": "Underwood Stairs",
+  "block.voidaicdepths.underwood_slab": "Underwood Slab",
+  "block.voidaicdepths.underwood_sign": "Underwood Sign",
 
   "block.voidaicdepths.void_weeds": "Void Weeds",
   "block.voidaicdepths.void_blossom": "Void Blossom",
@@ -49,12 +59,18 @@
   "block.voidaicdepths.twisted_shrub": "Twisted Shrub",
   "block.voidaicdepths.voidshroom": "Voidshroom",
 
+  "block.voidaicdepths.potted_void_blossom": "Potted Void Blossom",
+
   "block.voidaicdepths.void_stalk_stem": "Void Stalk",
   "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",
 
+<<<<<<< Updated upstream
   "itemGroup.voidaicdepths.main": "Voidaic Depths",
 
   "entity.voidiac_depths.void_fly": "Void Fly"
+=======
+  "itemGroup.voidaicdepths.main": "Voidaic Depths"
+>>>>>>> Stashed changes
 
 
 }

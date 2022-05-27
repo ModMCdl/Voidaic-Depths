@@ -4,6 +4,10 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
+<<<<<<< Updated upstream
+=======
+        mavenCentral()
+>>>>>>> Stashed changes
         gradlePluginPortal()
     }
 }

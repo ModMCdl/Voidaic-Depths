@@ -1,0 +1,26 @@
+{
+  "the_void_music_disc":{
+    "sounds": [
+      {
+        "name": "voidaicdepths:the_void_music_disc",
+        "stream": true
+      }
+    ]
+  },
+  "remnants_music_disc":{
+    "sounds": [
+      {
+        "name": "voidaicdepths:remnants_music_disc",
+        "stream": true
+      }
+    ]
+  },
+  "ossify_music_disc":{
+    "sounds": [
+      {
+        "name": "voidaicdepths:ossify_music_disc",
+        "stream": true
+      }
+    ]
+  }
+}

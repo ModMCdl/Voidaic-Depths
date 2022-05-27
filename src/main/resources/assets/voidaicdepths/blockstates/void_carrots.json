@@ -1,6 +1,7 @@
 {
   "variants": {
     "age=0": {
+<<<<<<< Updated upstream
       "model": "voidaicdepths:blocks/void_carrots_stage0"
     },
     "age=1": {
@@ -23,6 +24,30 @@
     },
     "age=7": {
       "model": "voidaicdepths:blocks/void_carrots_stage3"
+=======
+      "model": "voidaicdepths:block/void_carrots_stage1"
+    },
+    "age=1": {
+      "model": "voidaicdepths:block/void_carrots_stage1"
+    },
+    "age=2": {
+      "model": "voidaicdepths:block/void_carrots_stage1"
+    },
+    "age=3": {
+      "model": "voidaicdepths:block/void_carrots_stage1"
+    },
+    "age=4": {
+      "model": "voidaicdepths:block/void_carrots_stage2"
+    },
+    "age=5": {
+      "model": "voidaicdepths:block/void_carrots_stage2"
+    },
+    "age=6": {
+      "model": "voidaicdepths:block/void_carrots_stage2"
+    },
+    "age=7": {
+      "model": "voidaicdepths:block/void_carrots_stage3"
+>>>>>>> Stashed changes
     }
   }
 }
