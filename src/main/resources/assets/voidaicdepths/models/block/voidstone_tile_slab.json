@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "voidaicdepths:blocks/voidstone/voidrock_tiles",
-    "top": "voidaicdepths:blocks/voidstone/voidrock_tiles",
-    "side": "voidaicdepths:blocks/voidstone/voidrock_tiles"
-  }
-}

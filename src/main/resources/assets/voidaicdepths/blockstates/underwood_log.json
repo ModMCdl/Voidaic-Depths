@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y": { "model":  "voidaicdepths:block/underwood_log" },
-    "axis=z": { "model":  "voidaicdepths:block/underwood_log", "x": 90 },
-    "axis=x": { "model":  "voidaicdepths:block/underwood_log", "x": 90, "y": 90 }
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "voidaicdepths:blocks/voidstone/voidrock_smooth"
-  }
-}

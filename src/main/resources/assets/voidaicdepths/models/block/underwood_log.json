@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "voidaicdepths:blocks/void_log_top",
-    "side": "voidaicdepths:blocks/void_log"
-  }
-}

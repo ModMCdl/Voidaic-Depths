@@ -1,9 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "particle": "voidaicdepths:blocks/voidstone",
-    "bottom": "voidaicdepths:blocks/voidstone",
-    "top": "voidaicdepths:blocks/overgrown_voidstone_top",
-    "side": "voidaicdepths:blocks/overgrown_voidstone"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "voidaicdepths:blocks/void_wood_planks"
-  }
-}

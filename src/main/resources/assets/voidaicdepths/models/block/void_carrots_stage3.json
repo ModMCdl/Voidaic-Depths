@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "voidaicdepths:blocks/void_carrots_stage3"
-  }
-}

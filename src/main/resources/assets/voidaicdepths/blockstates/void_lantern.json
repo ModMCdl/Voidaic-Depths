@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "hanging=true": { "model": "voidaicdepths:block/void_lantern_hanging"},
-    "hanging=false": { "model": "voidaicdepths:block/void_lantern"}
-  }
-}
