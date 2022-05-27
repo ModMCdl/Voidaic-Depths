@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "voidaicdepths:blocks/voidstone/voidrock_pillars_top",
+    "side": "voidaicdepths:blocks/voidstone/voidrock_pillars"
+  }
+}

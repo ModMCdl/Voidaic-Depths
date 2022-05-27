@@ -1,0 +1,70 @@
+{
+  "item.voidaicdepths.arcane_salt": "Arcane Salt",
+  "item.voidaicdepths.void_crystal": "Void Crystal",
+  "item.voidaicdepths.void_essence": "Voidaic Essence",
+  "item.voidaicdepths.void_star": "Void Star",
+  "item.voidaicdepths.attuned_ender_pearl": "Attuned Ender Pearl",
+  "item.voidaicdepths.eye_of_the_void": "Eye of the Void",
+
+  "item.voidaicdepths.void_carrot": "Void Carrot",
+
+  "item.voidaicdepths.void_nugget": "Void Nugget",
+  "item.voidaicdepths.void_ingot": "Void Ingot",
+
+  "item.voidaicdepths.ossificum_ingot": "Ossificum Ingot",
+
+  "item.voidaicdepths.staff_of_translocation": "Staff of Translocation",
+  "item.voidaicdepths.staff_of_voidaic_charge": "Staff of Voidaic Charge",
+
+  "item.voidaicdepths.void_goggles": "Void Googles of Clairvoyance",
+
+  "item.voidaicdepths.the_void_music_disc": "Music Disc",
+  "item.voidaicdepths.the_void_music_disc.desc": "ModMCdl - the void",
+  "item.voidaicdepths.remnants_music_disc": "Music Disc",
+  "item.voidaicdepths.remnants_music_disc.desc": "ModMCdl - remnants",
+  "item.voidaicdepths.ossify_music_disc": "Music Disc",
+  "item.voidaicdepths.ossify_music_disc.desc": "ModMCdl - ossify",
+
+  "block.voidaicdepths.voidstone": "Voidstone",
+  "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
+  "block.voidaicdepths.void_sand": "Void Sand",
+  "block.voidaicdepths.voidstone_pillar": "Voidstone Pillar",
+  "block.voidaicdepths.voidstone_tiles": "Voidstone Tiles",
+  "block.voidaicdepths.cracked_voidstone_tiles": "Cracked Voidstone Tiles",
+  "block.voidaicdepths.polished_voidstone": "Polished Voidstone",
+  "block.voidaicdepths.voidstone_wall": "Voidstone Wall",
+  "block.voidaicdepths.polished_voidstone_wall": "Polished Voidstone Wall",
+  "block.voidaicdepths.polished_voidstone_stairs": "Polished Voidstone Stairs",
+  "block.voidaicdepths.voidstone_tile_stairs": "Voidstone Tile Stairs",
+  "block.voidaicdepths.voidstone_tile_slab": "Voidstone Tile Slab",
+  "block.voidaicdepths.polished_voidstone_slab": "Polished Voidstone Slab",
+
+  "block.voidaicdepths.void_portal_frame": "Void Portal Frame",
+
+  "block.voidaicdepths.void_ore": "Void Ore",
+
+  "block.voidaicdepths.void_cloud": "Void Cloud",
+
+  "block.voidaicdepths.void_lantern": "Void Lantern",
+
+  "block.voidaicdepths.underwood_log": "Underwood Log",
+  "block.voidaicdepths.underwood_planks": "Underwood Planks",
+  "block.voidaicdepths.underwood_stairs": "Underwood Stairs",
+  "block.voidaicdepths.underwood_slab": "Underwood Slab",
+  "block.voidaicdepths.underwood_sign": "Underwood Sign",
+
+  "block.voidaicdepths.void_weeds": "Void Weeds",
+  "block.voidaicdepths.void_blossom": "Void Blossom",
+  "block.voidaicdepths.nightbloom": "Nightbloom",
+  "block.voidaicdepths.twisted_shrub": "Twisted Shrub",
+  "block.voidaicdepths.voidshroom": "Voidshroom",
+
+  "block.voidaicdepths.potted_void_blossom": "Potted Void Blossom",
+
+  "block.voidaicdepths.void_stalk_stem": "Void Stalk",
+  "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",
+
+  "itemGroup.voidaicdepths.main": "Voidaic Depths"
+
+
+}

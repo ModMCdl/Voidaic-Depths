@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_wall_post_side",
+  "textures": {
+    "wall": "voidaicdepths:blocks/voidstone"
+  }
+}

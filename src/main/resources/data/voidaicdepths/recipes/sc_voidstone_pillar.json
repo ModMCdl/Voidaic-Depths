@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient":
+  {
+    "item": "voidaicdepths:voidstone"
+  },
+
+    "result": "voidaicdepths:voidstone_pillar",
+    "count": 1
+}
