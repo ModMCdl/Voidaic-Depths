@@ -19,6 +19,7 @@ public class VoidaicItems
     public static final Item EYE_OF_THE_VOID = registerItem("eye_of_the_void", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP).rarity(Rarity.EPIC)));
 
     public static final Item VOID_CARROT = registerItem("void_carrot", new AliasedBlockItem(VoidaicBlocks.VOID_CARROTS, new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP).food(VoidaicFoods.VOID_CARROT)));
+    public static final Item VOID_CARROT_STEW = registerItem("void_carrot_stew", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP).food(VoidaicFoods.VOID_CARROT_STEW).maxCount(1)));
 
     public static final Item VOID_INGOT = registerItem("void_ingot", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
     public static final Item VOID_NUGGET = registerItem("void_nugget", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
