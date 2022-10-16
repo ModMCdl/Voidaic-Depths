@@ -6,7 +6,7 @@
   "name": "Voidaic Depths",
   "description": "Far far down, deep below the bedrock, is an eerie and unknown world. Journey into its depths to discover strange new features, plants, and creatures. Explore the ruins of an ancient civilization, gone long before your time. Voidaic Depths introduces The Void as an entirely new dimension, with its own generation, blocks, items, mobs, structures and more. ",
   "authors": [
-    "Sylve"
+    "ModMCdl"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,15 +14,15 @@
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/modmcdl/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.sylve.voidaicdepths.VoidaicDepths"
+      "net.modmcdl.voidaicdepths.VoidaicDepths"
     ],
     "client": [
-      "net.sylve.voidaicdepths.client.VoidaicClientManager"
+      "net.modmcdl.voidaicdepths.client.VoidaicClientManager"
     ]
   },
   "mixins": [
@@ -30,9 +30,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.9",
     "fabric": "*",
-    "minecraft": "~1.18.2",
+    "minecraft": "~1.19.2",
     "java": ">=17"
   },
   "suggests": {

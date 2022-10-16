@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":
+  {
+    "#": {
+      "item": "voidaicdepths:void_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "voidaicdepths:void_metal_block",
+    "count": 1
+  }
+}

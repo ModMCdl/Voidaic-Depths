@@ -12,6 +12,7 @@
   "item.voidaicdepths.void_nugget": "Void Nugget",
   "item.voidaicdepths.void_ingot": "Void Ingot",
 
+  "item.voidaicdepths.ossificum_shard": "Ossificum Shard",
   "item.voidaicdepths.ossificum_ingot": "Ossificum Ingot",
 
   "item.voidaicdepths.staff_of_translocation": "Staff of Translocation",
@@ -28,6 +29,7 @@
 
   "block.voidaicdepths.voidstone": "Voidstone",
   "block.voidaicdepths.overgrown_voidstone": "Overgrown Voidstone",
+  "block.voidaicdepths.fleshy_voidstone": "Fleshy Voidstone",
   "block.voidaicdepths.void_sand": "Void Sand",
   "block.voidaicdepths.voidstone_pillar": "Voidstone Pillar",
   "block.voidaicdepths.voidstone_tiles": "Voidstone Tiles",
@@ -43,6 +45,11 @@
   "block.voidaicdepths.void_portal_frame": "Void Portal Frame",
 
   "block.voidaicdepths.void_ore": "Void Ore",
+  "block.voidaicdepths.void_metal_block": "Void Metal Block",
+
+  "block.voidaicdepths.ossificum_ore": "Ossificum Ore",
+  "block.voidaicdepths.ossificum_block": "Ossificum Block",
+
 
   "block.voidaicdepths.void_cloud": "Void Cloud",
 

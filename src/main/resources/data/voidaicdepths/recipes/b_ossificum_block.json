@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":
+  {
+    "#": {
+      "item": "voidaicdepths:ossificum_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "voidaicdepths:ossificum_block",
+    "count": 1
+  }
+}
