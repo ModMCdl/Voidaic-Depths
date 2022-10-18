@@ -72,7 +72,9 @@
   "block.voidaicdepths.void_stalk_stem": "Void Stalk",
   "block.voidaicdepths.void_stalk_bulb": "Void Stalk Blossom",
 
-  "itemGroup.voidaicdepths.main": "Voidaic Depths"
+  "itemGroup.voidaicdepths.main": "Voidaic Depths",
+
+  "effect.voidaicdepths.voidseer": "Voidseer"
 
 
 }

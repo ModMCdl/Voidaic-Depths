@@ -6,8 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.modmcdl.voidaicdepths.core.VoidaicBlocks;
-import net.modmcdl.voidaicdepths.core.VoidaicDimensions;
 import net.modmcdl.voidaicdepths.core.VoidaicItems;
+import net.modmcdl.voidaicdepths.core.effect.VoidaicEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,6 +27,6 @@ public class VoidaicDepths implements ModInitializer {
 		VoidaicItems.registerVoidItems();
 		VoidaicBlocks.registerVoidBlocks();
 
-		VoidaicDimensions.registerDimensions();
+		VoidaicEffects.registerEffects();
 	}
 }

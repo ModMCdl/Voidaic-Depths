@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:fill_layer",
-  "config": {
-    "state": {
-      "Name": "voidaicdepths:overgrown_voidstone"
-    },
-    "height": 1
-  }
-}

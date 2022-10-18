@@ -1,7 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "item/handheld",
   "textures":
   {
-    "layer0": "voidaicdepths:items/translocation_staff"
+    "layer0": "voidaicdepths:items/staff_of_translocation"
   }
 }

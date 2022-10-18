@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/modmcdl/icon.png",
+  "icon": "assets/voidaicdepths/icon.png",
 
   "environment": "*",
   "entrypoints": {

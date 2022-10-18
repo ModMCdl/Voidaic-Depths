@@ -1,11 +1,15 @@
 package net.modmcdl.voidaicdepths.core;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.modmcdl.voidaicdepths.VoidaicDepths;
+import net.modmcdl.voidaicdepths.core.items.TranslocationStaff;
+import net.modmcdl.voidaicdepths.core.items.VoidArmorMaterials;
+import net.modmcdl.voidaicdepths.core.items.VoidGoggles;
 import net.modmcdl.voidaicdepths.core.items.VoidMusicDisc;
 
 public class VoidaicItems
@@ -25,8 +29,9 @@ public class VoidaicItems
     public static final Item OSSIFICUM_INGOT = registerItem("ossificum_ingot", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
     public static final Item OSSIFICUM_SHARD = registerItem("ossificum_shard", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
 
-    public static final Item TRANSLOCATION_STAFF = registerItem("staff_of_translocation", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
-    public static final Item VOID_GOGGLES = registerItem("void_goggles", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
+    public static final Item TRANSLOCATION_STAFF = registerItem("staff_of_translocation", new TranslocationStaff(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
+    public static final Item VOIDAIC_CHARGE_STAFF = registerItem("staff_of_voidaic_charge", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
+    public static final Item VOID_GOGGLES = registerItem("void_goggles", new VoidGoggles(VoidArmorMaterials.GOGGLES, EquipmentSlot.HEAD, new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
 
     public static final Item THE_VOID_MUSIC_DISC = registerItem("the_void_music_disc", new VoidMusicDisc(7, VoidaicSounds.THE_VOID_DISC, new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP).maxCount(1).rarity(Rarity.RARE), 228));
     public static final Item REMNANTS_MUSIC_DISC = registerItem("remnants_music_disc", new VoidMusicDisc(7, VoidaicSounds.REMNANTS_DISC, new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP).maxCount(1).rarity(Rarity.RARE), 215));
