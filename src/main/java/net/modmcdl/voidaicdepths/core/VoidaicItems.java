@@ -29,7 +29,7 @@ public class VoidaicItems
     public static final Item OSSIFICUM_INGOT = registerItem("ossificum_ingot", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
     public static final Item OSSIFICUM_SHARD = registerItem("ossificum_shard", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
 
-    public static final Item TRANSLOCATION_STAFF = registerItem("staff_of_translocation", new TranslocationStaff(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
+    public static final Item TRANSLOCATION_STAFF = registerItem("staff_of_translocation", new TranslocationStaff(new FabricItemSettings().maxDamage(16).group(VoidaicDepths.VDITEMGROUP)));
     public static final Item VOIDAIC_CHARGE_STAFF = registerItem("staff_of_voidaic_charge", new Item(new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
     public static final Item VOID_GOGGLES = registerItem("void_goggles", new VoidGoggles(VoidArmorMaterials.GOGGLES, EquipmentSlot.HEAD, new FabricItemSettings().group(VoidaicDepths.VDITEMGROUP)));
 

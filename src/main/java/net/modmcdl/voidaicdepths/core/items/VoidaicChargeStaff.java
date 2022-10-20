@@ -1,11 +1,8 @@
 package net.modmcdl.voidaicdepths.core.items;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -19,9 +16,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.modmcdl.voidaicdepths.core.VoidaicItems;
 
-public class TranslocationStaff extends Item
+public class VoidaicChargeStaff extends Item
 {
-    public TranslocationStaff(Settings settings)
+    public VoidaicChargeStaff(Settings settings)
     {
         super(settings);
     }
@@ -31,10 +28,7 @@ public class TranslocationStaff extends Item
         return ingredient.isOf(VoidaicItems.ATTUNED_ENDER_PEARL);
     }
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
-    {
-        ItemStack itemStack = user.getStackInHand(hand);
-
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient() && hand == Hand.MAIN_HAND && !user.hasVehicle()) {
 
             double d = user.getX();
@@ -60,15 +54,9 @@ public class TranslocationStaff extends Item
                 }
             }
             ((PlayerEntity)user).getItemCooldownManager().set(this, 15);
-            user.incrementStat(Stats.USED.getOrCreateStat(this));
-            if(!user.getAbilities().creativeMode)
-            {
-                itemStack.damage(1, user, (p) -> {
-                    p.sendToolBreakStatus(hand);
-                });
-            }
         }
 
+        user.incrementStat(Stats.USED.getOrCreateStat(this));
         return super.use(world, user, hand);
     }
 }
