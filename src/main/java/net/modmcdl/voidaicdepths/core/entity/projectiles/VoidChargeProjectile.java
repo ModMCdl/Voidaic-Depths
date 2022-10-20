@@ -7,9 +7,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -29,41 +32,42 @@ public class VoidChargeProjectile extends ThrownItemEntity
         super(entityType, world);
     }
 
+    public VoidChargeProjectile(World world, LivingEntity owner) {
+        super(EntityType.SNOWBALL, owner, world);
+    }
     @Override
     protected Item getDefaultItem() {
         return VoidaicItems.EYE_OF_THE_VOID;
     }
 
-    protected void onCollision(HitResult hitResult) {
-        super.onCollision(hitResult);
+    private ParticleEffect getParticleParameters() {
+        ItemStack itemStack = this.getItem();
+        return (ParticleEffect)(itemStack.isEmpty() ? ParticleTypes.ASH : new ItemStackParticleEffect(ParticleTypes.ITEM, itemStack));
+    }
 
-        for(int i = 0; i < 32; ++i) {
-            this.world.addParticle(ParticleTypes.ASH, this.getX(), this.getY() + this.random.nextDouble() * 2.0, this.getZ(), this.random.nextGaussian(), 0.0, this.random.nextGaussian());
-        }
+    public void handleStatus(byte status) {
+        if (status == 3) {
+            ParticleEffect particleEffect = this.getParticleParameters();
 
-        if (!this.world.isClient && !this.isRemoved()) {
-            Entity entity = this.getOwner();
-            if (entity instanceof ServerPlayerEntity) {
-                ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)entity;
-                if (serverPlayerEntity.networkHandler.getConnection().isOpen() && serverPlayerEntity.world == this.world ) {
-
-                    entity.onLanding();
-                    entity.damage(DamageSource.FALL, 5.0F);
-                }
-            } else if (entity != null) {
-                entity.requestTeleport(this.getX(), this.getY(), this.getZ());
-                entity.onLanding();
+            for(int i = 0; i < 8; ++i) {
+                this.world.addParticle(particleEffect, this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
             }
-
-            this.discard();
         }
 
     }
+    protected void onEntityHit(EntityHitResult entityHitResult) {
+        super.onEntityHit(entityHitResult);
+        Entity entity = entityHitResult.getEntity();
+        entity.damage(DamageSource.magic(this, this.getOwner()), (float)16);
+    }
 
+    protected void onCollision(HitResult hitResult) {
+        super.onCollision(hitResult);
+        if (!this.world.isClient) {
+            this.world.sendEntityStatus(this, (byte)3);
+            this.discard();
+        }
 
-
-    public boolean damage(DamageSource source, float amount) {
-        return false;
     }
 
 }

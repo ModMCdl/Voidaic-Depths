@@ -2,6 +2,7 @@ package net.modmcdl.voidaicdepths.core.items;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
+import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -16,6 +17,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.modmcdl.voidaicdepths.core.VoidaicItems;
+import net.modmcdl.voidaicdepths.core.entity.projectiles.VoidChargeProjectile;
 
 public class VoidaicChargeStaff extends Item
 {
@@ -33,10 +35,10 @@ public class VoidaicChargeStaff extends Item
         if (!world.isClient() && hand == Hand.MAIN_HAND && !user.hasVehicle()) {
             ItemStack itemStack = user.getStackInHand(hand);
             ItemStack voidCharge = VoidaicItems.EYE_OF_THE_VOID.getDefaultStack();
-            world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+            world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.HOSTILE, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
             user.getItemCooldownManager().set(this, 20);
             if (!world.isClient) {
-                EnderPearlEntity voidChargeProjectile = new EnderPearlEntity(world, user);
+                VoidChargeProjectile voidChargeProjectile = new VoidChargeProjectile(world, user);
                 voidChargeProjectile.setItem(voidCharge);
                 voidChargeProjectile.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
                 world.spawnEntity(voidChargeProjectile);
