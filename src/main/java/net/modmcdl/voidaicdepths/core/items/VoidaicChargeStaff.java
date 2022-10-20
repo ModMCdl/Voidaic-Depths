@@ -1,6 +1,7 @@
 package net.modmcdl.voidaicdepths.core.items;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -30,30 +31,24 @@ public class VoidaicChargeStaff extends Item
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient() && hand == Hand.MAIN_HAND && !user.hasVehicle()) {
-
-            double d = user.getX();
-            double e = user.getY();
-            double f = user.getZ();
-            float yaw = user.getYaw();
-
-            float y1 = MathHelper.cos(-yaw * 0.017453292F - 3.1415927F); //cos 180 = 1
-            float y2 = MathHelper.sin(-yaw * 0.017453292F - 3.1415927F); //sin 180 = 0
-
-            for(int i = 0; i < 16; ++i) {
-                double g = user.getX() + (-y2 * 16.0);
-                double h = MathHelper.clamp(user.getY() + (double)(user.getRandom().nextInt(16)), (double)world.getBottomY(), (double)(world.getBottomY() + ((ServerWorld)world).getLogicalHeight() - 1));
-                double j = user.getZ() + (-y1 * 16.0);
-
-                Vec3d vec3d = user.getPos();
-                if (user.teleport(g, h, j, true)) {
-                    world.emitGameEvent(GameEvent.TELEPORT, vec3d, GameEvent.Emitter.of(user));
-                    SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
-                    world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.PLAYERS, 1.0F, 1.0F);
-                    user.playSound(soundEvent, 1.0F, 1.0F);
-                    break;
-                }
+            ItemStack itemStack = user.getStackInHand(hand);
+            ItemStack voidCharge = VoidaicItems.EYE_OF_THE_VOID.getDefaultStack();
+            world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+            user.getItemCooldownManager().set(this, 20);
+            if (!world.isClient) {
+                EnderPearlEntity voidChargeProjectile = new EnderPearlEntity(world, user);
+                voidChargeProjectile.setItem(voidCharge);
+                voidChargeProjectile.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
+                world.spawnEntity(voidChargeProjectile);
             }
-            ((PlayerEntity)user).getItemCooldownManager().set(this, 15);
+
+            user.incrementStat(Stats.USED.getOrCreateStat(this));
+            if(!user.getAbilities().creativeMode)
+            {
+                itemStack.damage(1, user, (p) -> {
+                    p.sendToolBreakStatus(hand);
+                });
+            }
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

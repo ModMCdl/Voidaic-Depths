@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -30,12 +31,15 @@ public class TranslocationStaff extends Item
     {
         return ingredient.isOf(VoidaicItems.ATTUNED_ENDER_PEARL);
     }
+    public static boolean isUsable(ItemStack stack) {
+        return stack.getDamage() < stack.getMaxDamage() - 1;
+    }
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
         ItemStack itemStack = user.getStackInHand(hand);
 
-        if (!world.isClient() && hand == Hand.MAIN_HAND && !user.hasVehicle()) {
+        if (!world.isClient() && hand == Hand.MAIN_HAND && !user.hasVehicle() && isUsable(itemStack)) {
 
             double d = user.getX();
             double e = user.getY();
@@ -56,16 +60,18 @@ public class TranslocationStaff extends Item
                     SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
                     world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.PLAYERS, 1.0F, 1.0F);
                     user.playSound(soundEvent, 1.0F, 1.0F);
+
+                    ((PlayerEntity)user).getItemCooldownManager().set(this, 15);
+                    user.incrementStat(Stats.USED.getOrCreateStat(this));
+
+                    if(!user.getAbilities().creativeMode)
+                    {
+                        itemStack.damage(1, user, (p) -> {
+                            p.sendToolBreakStatus(hand);
+                        });
+                    }
                     break;
                 }
-            }
-            ((PlayerEntity)user).getItemCooldownManager().set(this, 15);
-            user.incrementStat(Stats.USED.getOrCreateStat(this));
-            if(!user.getAbilities().creativeMode)
-            {
-                itemStack.damage(1, user, (p) -> {
-                    p.sendToolBreakStatus(hand);
-                });
             }
         }
 

@@ -3,5 +3,13 @@
   "textures":
   {
     "layer0": "voidaicdepths:items/staff_of_translocation"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "item/broken_elytra"
+    }
+  ]
 }
